@@ -4,7 +4,7 @@ import './Footer.scss';
 function Footer() {
 	return (
 		<footer>
-			<span>Copyright Pencil Memories 2020</span>
+			<span>Copyright &copy; Pencil Memories 2020</span>
 		</footer>
 	);
 }
