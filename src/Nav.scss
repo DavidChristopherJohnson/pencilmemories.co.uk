@@ -14,21 +14,18 @@ nav {
 		li {
 			padding: 0.25rem 1rem;
 
-			// a:any-link {
-			// 	text-decoration: none;
-			// }
+			a:link,
+			a:active,
+			a:hover,
+			a:visited {
+				background-color: black;
+				color: white;
+				text-decoration: none;
+			}
 
-			// a:link,
-			// a:active,
-			// a:hover,
-			// a:visited {
-			// 	background-color: black;
-			// 	color: white;
-			// }
-
-			// a:hover {
-			// 	text-decoration: underline;
-			// }
+			a:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 }
