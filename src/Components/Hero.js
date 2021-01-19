@@ -58,7 +58,7 @@ const Hero = () => {
                 <HeroContent>
                  <h1>Get the Finest piece of art</h1>
                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                 <Button primary='true' big='true'>Gallery</Button>
+                 <Button to='/Gallery' primary='true' big='true'>Gallery</Button>
                 </HeroContent>
             </HeroWrapper>
         </HeroSection>
