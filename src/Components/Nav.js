@@ -4,6 +4,7 @@ import styled, {css} from 'styled-components/macro'
 import { menuData } from '../data/MenuData'
 import { Button } from './Button'
 import Bars from '../assets/img/bars-solid.svg'
+import logo from '../assets/icons/favicon32.png'
 
 
 const Nav = styled.nav`
@@ -36,7 +37,6 @@ font-weight: 400;
 
 @media screen and (max-width: 768px){
     color: #000d1a;
-    padding-right: 1rem;
 }
 `
 const MenuBars = styled.i`
@@ -81,7 +81,9 @@ margin-right: 24px;
 const Navbar = ({toggle}) => {
     return (
        <Nav>
-           <Logo>PrimaryDrawing</Logo>
+           <Logo>
+           <img src={logo} alt='logo' />
+           PrimaryDrawing</Logo>
            <MenuBars onClick={toggle}  />
            <NavMenu>
                {menuData.map ((item, index) => (

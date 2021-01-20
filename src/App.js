@@ -4,6 +4,8 @@ import Nav from './Components/Nav'
 import GlobalStyle from './globalStyles'
 import Dropdown from './Components/Dropdown'
 import Hero from './Components/Hero';
+import About from './Components/About'
+import { inforData } from './data/InforData';
 
 const App = () => {
 	const [isOpen, setIsOpen] = useState(false)
@@ -18,6 +20,7 @@ const App = () => {
 			<Nav toggle={toggle} />
 			<Dropdown isOpen={isOpen} toggle={toggle} />
 			<Hero />
+			<About {...inforData} />
 		</Router>
 		</>
 	)
