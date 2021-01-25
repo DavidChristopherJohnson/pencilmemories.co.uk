@@ -2,10 +2,25 @@ import React from 'react'
 import { Button } from './Button'
 import styled from 'styled-components'
 import Bg from '../assets/img/Bg.jpg'
+import { motion } from 'framer-motion'
+
+const containerVariants = {
+    hidden: {
+        x: "-100vw",
+    },
+    visible :{
+        x: 0,
+        transition:{
+            type: 'spring',
+            mass: 0.5,
+            delay: 1, 
+            duration: 1.5
+        }
+    }
+}
 
 
-
-const HeroSection= styled.div`
+const HeroSection= styled(motion.div)`
 height: 100vh;
 width: 100%;
 max-height: 1100px;
@@ -25,7 +40,7 @@ align-items: center;
 overflow: hidden;
 position: relative;
 `
-const HeroContent = styled.div`
+const HeroContent = styled(motion.div)`
 position: relative;
 margin-top: 2rem;
 z-index: 10;
@@ -55,7 +70,11 @@ const Hero = () => {
     return (
         <HeroSection>
             <HeroWrapper>
-                <HeroContent>
+                <HeroContent
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+                >
                  <h1>Get the Finest piece of art</h1>
                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                  <Button to='/Gallery' primary='true' big='true'>Gallery</Button>

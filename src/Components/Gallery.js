@@ -1,45 +1,80 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from  'styled-components'
+import { motion, useViewportScroll, useTransform, useAnimation } from "framer-motion";
+import { useInView } from 'react-intersection-observer';
 
-export const ProductsContainer = styled.div`
+const ProductsContainer = styled(motion.div)`
 width: 100vw;
 min-height: 100vh;
 padding: 2rem 1rem;
 background: #000d1a;
 color: #fff;
 `
-export const ProductWrapper = styled.div`
+const ProductWrapper = styled(motion.div)`
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
 margin: 0 auto;
-overflow-x: hidden;
 `
-export const ProductCard = styled.div`
+const ProductCard = styled(motion.div)`
 margin: 1rem 2.5rem;
 line-height: 2;
 width: 300px;
+
+@media screen and (max-width: 820px) {
+    margin: 2.5rem 1.5rem;
+    width: 260px;
+  }
 `
-export const ProductImg = styled.img`
+const ProductImg = styled(motion.img)`
 height: 100%;
 max-width: 100%;
+
 `
-export const ProductsHeading = styled.h1`
+const ProductsHeading = styled(motion.h1)`
 font-size: clamp(2rem, 2.5vw, 3rem);
 text-align: center;
 margin: 2.5rem 0;
 color: #CD853f;
 `
 
+
 const Gallery = ({Heading, data}) => {
+
+  const { scrollYProgress } = useViewportScroll();
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+      if(inView){
+          controls.start ("visible");
+      }
+  }, [controls, inView]);
+
     return (
         <ProductsContainer>
             <ProductsHeading>{Heading}</ProductsHeading>
             <ProductWrapper>
                 {data.map ( (product, index) => {
                     return(
-                        <ProductCard key={index}>
-                            <ProductImg  src={product.img} alt={product.alt} /> 
+                        <ProductCard 
+                        ref={ref}
+                        variants={{
+                            visible:{opacity: 1,
+                                transition:{
+                                    delayChildren: 1, 
+                                    duration: 1.5 }
+                            
+                            },
+                            hidden: {opacity: 0}
+
+                        }}
+                        animate={controls}
+                        initial="hidden"
+                        style={{scale: scale}}
+                        key={index}>
+                            <ProductImg  src={product.img} alt={product.alt} delay={product.delay} /> 
                         </ProductCard> 
                     )
                 })}

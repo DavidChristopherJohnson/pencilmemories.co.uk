@@ -5,9 +5,10 @@ import { menuData } from '../data/MenuData'
 import { Button } from './Button'
 import Bars from '../assets/img/bars-solid.svg'
 import logo from '../assets/icons/favicon32.png'
+import { motion } from 'framer-motion'
 
 
-const Nav = styled.nav`
+const Nav = styled(motion.nav)`
 height: 60px;
 display:flex;
 justify-content:space-between;
@@ -29,6 +30,7 @@ padding: 0 1rem;
 height; 100%;
 cursor: pointer;
 text-decoration: none;
+font-size: 1rem;
 `
 const Logo = styled(Link)`
 ${NavLink}
@@ -66,6 +68,11 @@ margin-right: -48px;
 `
 const NavMenuLinks = styled(Link)`
 ${NavLink}
+
+&:hover{
+    color: #CD853f;
+    transition: ease-in .25s;
+}
 `
 const NavBtn = styled.div`
 display: flex;
@@ -77,10 +84,26 @@ margin-right: 24px;
   }
 `
 
-
+const containerVariants = {
+    hidden: {
+        y: -120,
+    },
+    visible :{
+        y: 0,
+        transition:{
+            type: 'spring',
+            mass: 0.4,
+            delay: 0.2
+        }
+    }
+}
 const Navbar = ({toggle}) => {
     return (
-       <Nav>
+       <Nav 
+       variants= {containerVariants}
+       initial= "hidden"
+       animate= "visible"
+       >
            <Logo>
            <img src={logo} alt='logo' />
            PrimaryDrawing</Logo>
