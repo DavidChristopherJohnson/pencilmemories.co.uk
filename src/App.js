@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router} from 'react-router-dom';
 import Nav from './Components/Nav'
 import GlobalStyle from './globalStyles'
 import Dropdown from './Components/Dropdown'
@@ -17,7 +17,6 @@ const App = () => {
     setIsOpen(!isOpen)
   }
 	return (
-		<>
 		<Router>
 			<GlobalStyle />
 			<Nav toggle={toggle} />
@@ -29,9 +28,8 @@ const App = () => {
 			<Gallery Heading='Animal potraits' data={AnimalData} />
 			<Footer />
 		</Router>
-		</>
 	)
 }
 
-export default App
+export default App;
 

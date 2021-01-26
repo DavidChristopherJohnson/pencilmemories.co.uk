@@ -123,7 +123,7 @@ function Footer() {
                                       ))}
                             </NavMenu>
                             <SocialIcons>
-                              <SocialIconLink href='/' target="_blank" aria-label="Facebook" rel="noopener noreferrer">
+                              <SocialIconLink href="https://m.facebook.com/DianeRachelJohnson/" target="https://m.facebook.com/DianeRachelJohnson/" aria-label="Facebook" rel="noopener noreferrer">
                                   <FaFacebook />
                               </SocialIconLink>
                               <SocialIconLink href='/' target="_blank" aria-label="Instagram" rel="noopener noreferrer">

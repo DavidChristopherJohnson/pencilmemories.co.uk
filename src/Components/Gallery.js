@@ -22,13 +22,17 @@ line-height: 2;
 width: 300px;
 
 @media screen and (max-width: 820px) {
-    margin: 2.5rem 1.5rem;
+    margin: 2.5rem 1rem;
     width: 260px;
   }
 `
 const ProductImg = styled(motion.img)`
 height: 100%;
 max-width: 100%;
+
+@media screen and (max-width: 820px) {
+    object-fit: cover;
+  }
 
 `
 const ProductsHeading = styled(motion.h1)`
@@ -42,7 +46,7 @@ color: #CD853f;
 const Gallery = ({Heading, data}) => {
 
   const { scrollYProgress } = useViewportScroll();
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
   const controls = useAnimation();
   const [ref, inView] = useInView();
 
@@ -64,7 +68,7 @@ const Gallery = ({Heading, data}) => {
                             visible:{opacity: 1,
                                 transition:{
                                     delayChildren: 1, 
-                                    duration: 1.5 }
+                                    duration: 1 }
                             
                             },
                             hidden: {opacity: 0}
