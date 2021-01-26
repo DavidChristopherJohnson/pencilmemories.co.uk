@@ -1,7 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link as LinkR} from 'react-router-dom'
+import { Link as  ScrollLink } from 'react-scroll'
 import styled, {css} from 'styled-components/macro'
-import { menuData } from '../data/MenuData'
 import { Button } from './Button'
 import Bars from '../assets/img/bars-solid.svg'
 import logo from '../assets/icons/favicon32.png'
@@ -32,7 +32,7 @@ cursor: pointer;
 text-decoration: none;
 font-size: 1rem;
 `
-const Logo = styled(Link)`
+const Logo = styled(LinkR)`
 ${NavLink}
 font-family: 'Playfair Display', serif;
 font-weight: 400;
@@ -66,9 +66,12 @@ margin-right: -48px;
   display: none;  
 }
 `
-const NavMenuLinks = styled(Link)`
+const NavMenuLinks = styled(ScrollLink)`
 ${NavLink}
 
+&.active{
+    border-bottom: 3px solid #CD853f;
+}
 &:hover{
     color: #CD853f;
     transition: ease-in .25s;
@@ -104,19 +107,17 @@ const Navbar = ({toggle}) => {
        initial= "hidden"
        animate= "visible"
        >
-           <Logo>
+           <Logo to='/'>
            <img src={logo} alt='logo' />
            PrimaryDrawing</Logo>
            <MenuBars onClick={toggle}  />
            <NavMenu>
-               {menuData.map ((item, index) => (
-                   <NavMenuLinks to={item.link} key={index}>
-                       {item.title}
-                    </NavMenuLinks>
-               ))}
+            <NavMenuLinks to='about' >About</NavMenuLinks>
+            <NavMenuLinks to='gallery' >Gallery</NavMenuLinks>
+            <NavMenuLinks to='contact' >Contact</NavMenuLinks>
            </NavMenu>
            <NavBtn>
-               <Button to='/Contact'>Contact Us</Button>
+               <Button to='footer'>Contact Us</Button>
            </NavBtn>
        </Nav>
     )

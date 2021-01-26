@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import {menuData} from '../data/MenuData'
+import { Link as  ScrollLink } from 'react-scroll'
 import { FaFacebook, FaInstagram, FaPinterest, FaTwitter } from 'react-icons/fa'
 import logo from '../assets/icons/favicon32.png'
 
@@ -85,7 +85,7 @@ flex-direction: column;
 align-items: center;
 margin: 2rem 0;
 `
-const NavMenuLinks = styled(Link)`
+const NavMenuLinks = styled(ScrollLink)`
   color: #fff;
   justify-self: start;
   cursor: pointer;
@@ -107,7 +107,7 @@ function Footer() {
 
 	const today = new Date();
 	return (
-		<FooterContainer>
+		<FooterContainer id='contact'>
 			<FooterWrapper>
                 <SocialMedia>
                     <SocialMediaWrap>
@@ -116,11 +116,9 @@ function Footer() {
                               Pencil Drawing
                             </Sociallogo>
                             <NavMenu>
-                                      {menuData.map ((item, index) => (
-                                        <NavMenuLinks to={item.link} key={index}>
-                                            {item.title}
-                                        </NavMenuLinks>
-                                      ))}
+                              <NavMenuLinks to='about' >About</NavMenuLinks>
+                              <NavMenuLinks to='gallery' >Gallery</NavMenuLinks>
+                              <NavMenuLinks to='contact' >Contact</NavMenuLinks>
                             </NavMenu>
                             <SocialIcons>
                               <SocialIconLink href="https://m.facebook.com/DianeRachelJohnson/" target="https://m.facebook.com/DianeRachelJohnson/" aria-label="Facebook" rel="noopener noreferrer">

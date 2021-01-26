@@ -57,7 +57,7 @@ const Gallery = ({Heading, data}) => {
   }, [controls, inView]);
 
     return (
-        <ProductsContainer>
+        <ProductsContainer id='gallery'>
             <ProductsHeading>{Heading}</ProductsHeading>
             <ProductWrapper>
                 {data.map ( (product, index) => {
@@ -67,8 +67,8 @@ const Gallery = ({Heading, data}) => {
                         variants={{
                             visible:{opacity: 1,
                                 transition:{
-                                    delayChildren: 1, 
-                                    duration: .3 }
+                                    delayChildren: .3, 
+                                    duration: .5 }
                             
                             },
                             hidden: {opacity: 0}

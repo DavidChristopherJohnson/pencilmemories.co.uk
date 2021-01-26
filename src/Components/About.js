@@ -61,7 +61,7 @@ img{
 
 const About = ({heading, paragraphOne, paragraphTwo, buttonLabel, image, reverse}) => {
     return (
-        <Section>
+        <Section id="about">
             <Container>
                 <ColumnLeft>
                 <h1>{heading}</h1>

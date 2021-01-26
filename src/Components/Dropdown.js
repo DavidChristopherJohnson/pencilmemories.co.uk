@@ -1,7 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link as  ScrollLink } from 'react-scroll'
 import styled from 'styled-components'
-import { menuData } from '../data/MenuData'
 import { Button } from './Button'
 import {FaTimes} from 'react-icons/fa'
 
@@ -43,7 +42,7 @@ margin-bottom: 4rem;
     grid-template-rows: repeat(4, 60px);
 }
 `
-const DropdownLink = styled(Link)`
+const DropdownLink = styled(ScrollLink)`
 display: flex;
 align-items: center;
 justify-content: center;
@@ -72,14 +71,12 @@ const Dropdown = ({isOpen, toggle}) => {
             </Icon>
             <DropdownWrapper>
                 <DropdownMenu>
-                    {menuData.map((item, index) => (
-                        <DropdownLink to={item.link} key={index}>
-                            {item.title}
-                        </DropdownLink>
-                    ))}
+                    <DropdownLink to="about" >About</DropdownLink>
+                    <DropdownLink to="gallery" >Gallery</DropdownLink>
+                    <DropdownLink to="contact" >Contact</DropdownLink>
                 </DropdownMenu>
                 <BtnWrap>
-                <Button primary='true' round='true' big='true' to ='/contact'>
+                <Button primary='true' round='true' big='true' to ='/Contact'>
                 Contact Us
                 </Button>
                 </BtnWrap>
