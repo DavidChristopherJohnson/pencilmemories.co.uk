@@ -28,7 +28,7 @@ width: 300px;
 `
 const ProductImg = styled(motion.img)`
 height: 100%;
-max-width: 100%;
+width: 100%;
 
 @media screen and (max-width: 820px) {
     object-fit: cover;
@@ -68,7 +68,7 @@ const Gallery = ({Heading, data}) => {
                             visible:{opacity: 1,
                                 transition:{
                                     delayChildren: 1, 
-                                    duration: 1 }
+                                    duration: .3 }
                             
                             },
                             hidden: {opacity: 0}
