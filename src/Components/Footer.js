@@ -118,6 +118,7 @@ function Footer() {
                             <NavMenu>
                               <NavMenuLinks to='about' >About</NavMenuLinks>
                               <NavMenuLinks to='gallery' >Gallery</NavMenuLinks>
+                              <NavMenuLinks to='feature' >Offer</NavMenuLinks>
                               <NavMenuLinks to='contact' >Contact</NavMenuLinks>
                             </NavMenu>
                             <SocialIcons>
