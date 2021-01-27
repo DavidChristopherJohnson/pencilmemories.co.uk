@@ -46,7 +46,7 @@ color: #CD853f;
 const Gallery = ({Heading, data}) => {
 
   const { scrollYProgress } = useViewportScroll();
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
   const controls = useAnimation();
   const [ref, inView] = useInView();
 
@@ -67,7 +67,7 @@ const Gallery = ({Heading, data}) => {
                         variants={{
                             visible:{opacity: 1,
                                 transition:{
-                                    delayChildren: .3, 
+                                    delay: .3, 
                                     duration: .5 }
                             
                             },

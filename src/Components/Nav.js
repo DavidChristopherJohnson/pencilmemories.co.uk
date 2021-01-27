@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link as LinkR} from 'react-router-dom'
-import { Link as  ScrollLink } from 'react-scroll'
+import { Link as  ScrollLink, animateScroll as scroll } from 'react-scroll'
 import styled, {css} from 'styled-components/macro'
 import { Button } from './Button'
 import Bars from '../assets/img/bars-solid.svg'
@@ -9,7 +9,7 @@ import { motion } from 'framer-motion'
 
 
 const Nav = styled(motion.nav)`
-height: 60px;
+height: 80px;
 display:flex;
 justify-content:space-between;
 padding: 1rem 2rem;
@@ -68,7 +68,7 @@ margin-right: -48px;
 `
 const NavMenuLinks = styled(ScrollLink)`
 ${NavLink}
-
+padding-bottom: 1rem;
 &.active{
     border-bottom: 3px solid #CD853f;
 }
@@ -101,20 +101,26 @@ const containerVariants = {
     }
 }
 const Navbar = ({toggle}) => {
+
+    const toggleHome = () =>{
+        scroll.scrollToTop()
+    }
+
     return (
        <Nav 
        variants= {containerVariants}
        initial= "hidden"
        animate= "visible"
        >
-           <Logo to='/'>
+           <Logo to='/' onClick={toggleHome}>
            <img src={logo} alt='logo' />
            PrimaryDrawing</Logo>
            <MenuBars onClick={toggle}  />
            <NavMenu>
-            <NavMenuLinks to='about' >About</NavMenuLinks>
-            <NavMenuLinks to='gallery' >Gallery</NavMenuLinks>
-            <NavMenuLinks to='contact' >Contact</NavMenuLinks>
+            <NavMenuLinks to='about' smooth={true} duration={500} spy={true} exact="true" offset={-80} >About</NavMenuLinks>
+            <NavMenuLinks to='gallery' smooth={true} duration={500} spy={true} exact="true" offset={-80} >Gallery</NavMenuLinks>
+            <NavMenuLinks to='feature' smooth={true} duration={500} spy={true} exact="true" offset={-80} >Offer</NavMenuLinks>
+            <NavMenuLinks to='contact' smooth={true} duration={500} spy={true} exact="true" offset={-80} >Contact</NavMenuLinks>
            </NavMenu>
            <NavBtn>
                <Button to='footer'>Contact Us</Button>
