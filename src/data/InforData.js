@@ -15,23 +15,29 @@ export const inforData ={
 }
 export const AnimalData = [
     {
-      img: product1
+      img: product1,
+      alt: "animal potrait"
     },
     {
-      img: product2
+      img: product2,
+      alt: "animal potrait"
     },
     {
-      img: product3
+      img: product3,
+      alt: "animal potrait"
     }
   ];
   export const PeopleData = [
     {
-      img: people1
+      img: people1,
+      alt: "human portrait"
     },
     {
-      img: people2
+      img: people2,
+      alt: "human portrait"
     },
     {
-      img: people3
+      img: people3,
+      alt: "human portrait"
     }
   ];
