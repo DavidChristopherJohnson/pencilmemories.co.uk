@@ -71,13 +71,13 @@ const Dropdown = ({isOpen, toggle}) => {
             </Icon>
             <DropdownWrapper>
                 <DropdownMenu>
-                    <DropdownLink to="about" >About</DropdownLink>
-                    <DropdownLink to="gallery" >Gallery</DropdownLink>
-                    <DropdownLink to="contact" >Contact</DropdownLink>
+                    <DropdownLink to="about" onClick={toggle} >About</DropdownLink>
+                    <DropdownLink to="gallery" onClick={toggle} >Gallery</DropdownLink>
+                    <DropdownLink to="contact"  onClick={toggle} >Contact</DropdownLink>
                 </DropdownMenu>
                 <BtnWrap>
                 <Button primary='true' round='true' big='true' to ='/Contact'>
-                Contact Us
+                JaneDoe@email.com
                 </Button>
                 </BtnWrap>
             </DropdownWrapper>

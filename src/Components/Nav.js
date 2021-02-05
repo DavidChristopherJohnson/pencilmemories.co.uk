@@ -114,7 +114,7 @@ const Navbar = ({toggle}) => {
        >
            <Logo to='/' onClick={toggleHome}>
            <img src={logo} alt='logo' />
-           PrimaryDrawing</Logo>
+           Primary Memories</Logo>
            <MenuBars onClick={toggle}  />
            <NavMenu>
             <NavMenuLinks to='about' smooth={true} duration={500} spy={true} exact="true" offset={-80} >About</NavMenuLinks>
@@ -123,7 +123,7 @@ const Navbar = ({toggle}) => {
             <NavMenuLinks to='contact' smooth={true} duration={500} spy={true} exact="true" offset={-80} >Contact</NavMenuLinks>
            </NavMenu>
            <NavBtn>
-               <Button to='footer'>Contact Us</Button>
+               <Button to='footer'>JaneDoe@email.com</Button>
            </NavBtn>
        </Nav>
     )

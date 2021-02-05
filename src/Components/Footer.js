@@ -113,7 +113,7 @@ function Footer() {
                     <SocialMediaWrap>
                             <Sociallogo to='/'>
                               <img src={logo} alt='logo' />
-                              Pencil Drawing
+                              Pencil Memories
                             </Sociallogo>
                             <NavMenu>
                               <NavMenuLinks to='about' >About</NavMenuLinks>
