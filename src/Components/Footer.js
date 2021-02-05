@@ -122,7 +122,7 @@ function Footer() {
                               <NavMenuLinks to='contact' >Contact</NavMenuLinks>
                             </NavMenu>
                             <SocialIcons>
-                              <SocialIconLink href="https://web.facebook.com/DianeRachelJohnson" target="https://m.facebook.com/DianeRachelJohnson/" aria-label="Facebook" rel="noopener noreferrer">
+                              <SocialIconLink href="https://facebook.com/DianeRachelJohnson" target="https://m.facebook.com/DianeRachelJohnson/" aria-label="Facebook" rel="noopener noreferrer">
                                   <FaFacebook />
                               </SocialIconLink>
 						              </SocialIcons>
