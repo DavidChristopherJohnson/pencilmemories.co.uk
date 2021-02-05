@@ -129,9 +129,10 @@ function Footer() {
                     </SocialMediaWrap>
         </SocialMedia> 
       </FooterWrapper>
-      <p>Copyright {today.getFullYear()}</p>
+      <p>Copyright &copy; {today.getFullYear()}</p>
     </FooterContainer>
 
+    
         
 	);
 }

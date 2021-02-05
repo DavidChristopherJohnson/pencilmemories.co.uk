@@ -73,6 +73,7 @@ const Dropdown = ({isOpen, toggle}) => {
                 <DropdownMenu>
                     <DropdownLink to="about" onClick={toggle} >About</DropdownLink>
                     <DropdownLink to="gallery" onClick={toggle} >Gallery</DropdownLink>
+                    <DropdownLink to="feature"  onClick={toggle} >Order Now</DropdownLink>
                     <DropdownLink to="contact"  onClick={toggle} >Contact</DropdownLink>
                 </DropdownMenu>
                 <BtnWrap>
