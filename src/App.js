@@ -15,9 +15,9 @@ const App = () => {
 			<GlobalStyle />
 			<Home />
 			<About {...inforData} />
-			<Gallery Heading='People potraits' alt="Human Potraits" data={PeopleData} />
+			<Gallery Heading='People potraits' data={PeopleData} />
 			<Feature />
-			<Gallery Heading='Animal potraits' alt="Animal Potraits" data={AnimalData} />
+			<Gallery Heading='Animal potraits'  data={AnimalData} />
 			<Footer />
 		</Router>
 	)
