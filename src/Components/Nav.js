@@ -55,7 +55,7 @@ display: none;
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(-50%, 45%);
+    transform: translate(-50%, 77%);
 }
 `
 const NavMenu = styled.div`

@@ -67,7 +67,7 @@ const SocialIcons = styled.div`
 
   @media screen and (max-width: 820px) {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
   }
 `;
 
@@ -84,6 +84,10 @@ display: flex;
 flex-direction: column;
 align-items: center;
 margin: 2rem 0;
+
+@media screen and (max-width: 768px){
+  flex-direction: row;
+}
 `
 const NavMenuLinks = styled(ScrollLink)`
   color: #fff;
@@ -98,6 +102,10 @@ const NavMenuLinks = styled(ScrollLink)`
   &:hover{
     color: #CD853f;
     transition: ease-in .25s;
+}
+@media screen and (max-width: 768px){
+  padding-right: 10px;
+  font-size: 1.5rem;
 }
 `
 
