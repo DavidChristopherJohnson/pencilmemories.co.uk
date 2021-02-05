@@ -39,6 +39,7 @@ font-weight: 400;
 
 @media screen and (max-width: 768px){
     color: #000d1a;
+    font-weight: 700;
 }
 `
 const MenuBars = styled.i`
