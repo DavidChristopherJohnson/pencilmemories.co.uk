@@ -114,7 +114,7 @@ const Navbar = ({toggle}) => {
        >
            <Logo to='/' onClick={toggleHome}>
            <img src={logo} alt='logo' />
-           Primary Memories</Logo>
+           Pencil Memories</Logo>
            <MenuBars onClick={toggle}  />
            <NavMenu>
             <NavMenuLinks to='about' smooth={true} duration={500} spy={true} exact="true" offset={-80} >About</NavMenuLinks>
