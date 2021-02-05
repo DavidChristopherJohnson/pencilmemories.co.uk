@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { Link as  ScrollLink } from 'react-scroll'
-import { FaFacebook, FaInstagram, FaPinterest, FaTwitter } from 'react-icons/fa'
+import { FaFacebook } from 'react-icons/fa'
 import logo from '../assets/icons/favicon32.png'
 
 const FooterContainer = styled.footer`
@@ -124,15 +124,6 @@ function Footer() {
                             <SocialIcons>
                               <SocialIconLink href="https://m.facebook.com/DianeRachelJohnson/" target="https://m.facebook.com/DianeRachelJohnson/" aria-label="Facebook" rel="noopener noreferrer">
                                   <FaFacebook />
-                              </SocialIconLink>
-                              <SocialIconLink href='/' target="_blank" aria-label="Instagram" rel="noopener noreferrer">
-                                  <FaInstagram />
-                              </SocialIconLink>
-                              <SocialIconLink href='/' target="_blank" aria-label="Twitter" rel="noopener noreferrer">
-                                  <FaTwitter />
-                              </SocialIconLink>
-                              <SocialIconLink href='/' target="_blank" aria-label="Pinterest" rel="noopener noreferrer">
-                                  <FaPinterest />
                               </SocialIconLink>
 						              </SocialIcons>
                     </SocialMediaWrap>
