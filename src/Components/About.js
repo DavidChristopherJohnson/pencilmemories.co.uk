@@ -66,7 +66,7 @@ const About = ({heading, paragraphOne, paragraphTwo, buttonLabel, image, reverse
                 <ColumnLeft>
                 <h1>{heading}</h1>
                 <p>{paragraphOne}</p>
-                <Button primary="true" to='/Contact'>{buttonLabel}</Button>
+                <Button primary="true" to='contact'>{buttonLabel}</Button>
                 </ColumnLeft>
                 <ColumnRight reverse={reverse}>
                 <img src={image} alt='home' />

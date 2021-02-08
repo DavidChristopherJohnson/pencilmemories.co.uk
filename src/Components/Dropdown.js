@@ -77,7 +77,7 @@ const Dropdown = ({isOpen, toggle}) => {
                     <DropdownLink to="contact"  onClick={toggle} >Contact</DropdownLink>
                 </DropdownMenu>
                 <BtnWrap>
-                <Button primary='true' round='true' big='true' to ='/Contact'>
+                <Button primary='true' round='true' big='true' to ='contact'>
                 JaneDoe@email.com
                 </Button>
                 </BtnWrap>

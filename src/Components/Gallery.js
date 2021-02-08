@@ -15,6 +15,7 @@ display: flex;
 flex-wrap: wrap;
 justify-content: center;
 margin: 0 auto;
+padding: 1.5rem 0;
 `
 const ProductCard = styled(motion.div)`
 margin: 1rem 2.5rem;

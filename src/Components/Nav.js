@@ -27,7 +27,6 @@ color: #fff;
 display: flex;
 align-items: center;
 padding: 0 1rem;
-height; 100%;
 cursor: pointer;
 text-decoration: none;
 font-size: 1rem;
@@ -121,10 +120,10 @@ const Navbar = ({toggle}) => {
             <NavMenuLinks to='about' smooth={true} duration={500} spy={true} exact="true" offset={-80} >About</NavMenuLinks>
             <NavMenuLinks to='gallery' smooth={true} duration={500} spy={true} exact="true" offset={-80} >Gallery</NavMenuLinks>
             <NavMenuLinks to='feature' smooth={true} duration={500} spy={true} exact="true" offset={-80} >Order Now</NavMenuLinks>
-            <NavMenuLinks to='contact' smooth={true} duration={500} spy={true} exact="true" offset={-80} >Contact</NavMenuLinks>
+
            </NavMenu>
            <NavBtn>
-               <Button to='footer'>JaneDoe@email.com</Button>
+               <Button to='contact'>Contact Us</Button>
            </NavBtn>
        </Nav>
     )

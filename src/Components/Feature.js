@@ -32,7 +32,7 @@ const Feature = () => {
         <FeatureContainer id='feature'>
             <h1>Get your potrait</h1>
             <p>It is easy, just contact me and I will get back to you </p>
-            <Button big="true">Order now</Button>
+            <Button big="true" to="contact">Order now</Button>
         </FeatureContainer>
     )
 }

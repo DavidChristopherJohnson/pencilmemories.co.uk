@@ -13,7 +13,7 @@ const App = () => {
 	return (
 		<Router>
 			<GlobalStyle />
-			<Home />
+			<Home  />
 			<About {...inforData} />
 			<Gallery Heading='People potraits' data={PeopleData} />
 			<Feature />

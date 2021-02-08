@@ -68,7 +68,7 @@ p{
 
 const Hero = () => {
     return (
-        <HeroSection>
+        <HeroSection id="home">
             <HeroWrapper>
                 <HeroContent
                 variants={containerVariants}
