@@ -3,8 +3,6 @@ import styled, { css } from "styled-components/macro";
 import FeaturePic from "../assets/img/FeaturePic.jpg";
 import emailjs from "emailjs-com";
 
-
-
 const FeatureContainer = styled.div`
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url(${FeaturePic});
@@ -93,6 +91,7 @@ const Btn = styled.div`
 `;
 
 const FormContainer = styled.div`
+  border-radius: 20px;
   background-color: #000d1a;
   height: 400px;
   width: 400px;
@@ -102,16 +101,25 @@ const FormContainer = styled.div`
 `;
 
 const Feature = () => {
-    function sendEmail(e) {
+  function sendEmail(e) {
     e.preventDefault();
 
-    emailjs.sendForm('gmail', 'template_9g63jap', e.target, 'user_KGysl3qmSKFIzCF3yRdm3')
-        .then((result) => {
-            console.log(result.text);
-        }, (error) => {
-            console.log(error.text);
-        });
-        e.target.reset()
+    emailjs
+      .sendForm(
+        "gmail",
+        "template_9g63jap",
+        e.target,
+        "user_KGysl3qmSKFIzCF3yRdm3"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
   }
   return (
     <FeatureContainer id="feature">
