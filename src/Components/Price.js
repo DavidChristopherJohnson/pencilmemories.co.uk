@@ -14,6 +14,9 @@ const ProductWrapper = styled.div`
   justify-content: center;
   margin: 0 auto;
   overflow-x: hidden;
+  @media screen and (max-width: 820px){
+    flex-direction: column;
+  }
 `;
 const ProductCard = styled.div`
   margin: 2rem;
