@@ -2,6 +2,8 @@ import React from "react";
 import styled, { css } from "styled-components/macro";
 import FeaturePic from "../assets/img/FeaturePic.jpg";
 import emailjs from "emailjs-com";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const FeatureContainer = styled.div`
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
@@ -113,9 +115,21 @@ const Feature = () => {
       )
       .then(
         (result) => {
+          toast.success("Message Sent!", {
+            className: "Toast-success",
+            draggable: false,
+            position: toast.POSITION.BOTTOM_CENTER,
+            hideProgressBar: true,
+          });
           console.log(result.text);
         },
         (error) => {
+          toast.error("Something went wrong! please try again", {
+            className: "Toast-Error",
+            draggable: false,
+            position: toast.POSITION.BOTTOM_CENTER,
+            hideProgressBar: true,
+          });
           console.log(error.text);
         }
       );
